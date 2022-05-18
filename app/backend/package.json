@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "backend do projeto de blitz de carreira da trybe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src  ./src/server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adadezer Iwazaki",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.13",
