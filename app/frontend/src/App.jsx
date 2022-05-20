@@ -23,7 +23,7 @@ const App = () => {
 
   const handleTaskAddition = () => {
     const newTask = [...tasks,{
-        id: '20',
+        id: '2',
         descricao: 'hard code',
         status: 'pendente',
         createdAt: 'data'
