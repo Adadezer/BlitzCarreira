@@ -5,9 +5,10 @@
   <summary>
     <strong>🤷🏽‍♀️ Como rodar a aplicação</strong>
   </summary><br>
+  
   1- O projeto usa o banco de dados `MySQL`, inicie o mysql com o comando
-    
-    - `systemctl start mysql`.
+  
+  - `systemctl start mysql`.
 
   2- Abra o terminal, e clone o repositório 
  
