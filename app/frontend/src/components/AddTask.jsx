@@ -6,8 +6,8 @@ const AddTask = ({handleTaskAddition}) => {
   const [inputData, setInputData] = useState('');
 
   const handleInputChange = (e) => {
-    // console.log(e);
-    setInputData(e.target.value);
+    console.log('e', e);
+    setInputData(e.target.value); // é oq eu digito no input
   }
 
   const handleTaskClick = () => {

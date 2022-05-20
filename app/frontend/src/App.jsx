@@ -11,23 +11,13 @@ import TaskDetails from './components/TaskDetails';
 import './App.css';
 
 const App = () => {
-  const  [tasks, setTasks] = useState([
-    {
-      id: '1',
-      title: 'Estudar Programação',
-      completed: false,
-    },
-    {
-      id: '2',
-      title: 'Ler Livros',
-      completed: true,
-    },
-  ]);
+  const  [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=10');
-      
+      // const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=10');
+      const { data } = await axios.get('http://localhost:3001/todo');
+      console.log('linha 30', data);
       setTasks(data);
     }
 
@@ -45,9 +35,10 @@ const App = () => {
 
   const handleTaskAddition = (taskTitle) => {
     const newTask = [...tasks,{
-        title: taskTitle,
         id: uuidv4(),
-        completed: false,
+        title: taskTitle,
+        status: 'pendende',
+        createdAt: ''
       },
     ];
     setTasks(newTask);
