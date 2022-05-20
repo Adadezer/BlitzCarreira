@@ -1,24 +1,13 @@
 import express from 'express';
 import routerTodo from './routes/routerTask.routes';
-// import routerTeams from './routes/routerTeams.routes';
-// import routerMatches from './routes/routerMatches.routes';
-// import routerLeaderboard from './routes/routerLeaderboard.routes';
-// import error from './middlewares/error';
 
 class App {
   public app: express.Express;
-  // ...
 
   constructor() {
-    // ...
     this.app = express();
     this.config();
     this.app.use('/todo', routerTodo);
-    // this.app.use('/teams', routerTeams);
-    // this.app.use('/matches', routerMatches);
-    // this.app.use('/leaderboard', routerLeaderboard);
-    // this.app.use(error);
-    // ...
   }
 
   private config():void {
@@ -31,10 +20,8 @@ class App {
 
     this.app.use(accessControl);
     this.app.use(express.json());
-    // ...
   }
 
-  // ...
   public start(PORT: string | number):void {
     this.app.listen(PORT, () => console.log(`rodando na porta ${PORT}`));
   }
@@ -42,5 +29,4 @@ class App {
 
 export { App };
 
-// A execução dos testes de cobertura depende dessa exportação
 export const { app } = new App();

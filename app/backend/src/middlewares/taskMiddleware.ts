@@ -11,7 +11,7 @@ export default function validationTask(req: Request, res: Response, next: NextFu
     return res.status(404).json({ message: 'Preencha o campo status' });
   }
 
-  if (status !== 'Pendente' || status !== 'Concluido' || status !== 'Em Andamento') {
+  if (status !== 'pendente' && status !== 'concluido' && status !== 'em andamento') {
     return res.status(404).json({ message: 'status não aceito' });
   }
   
