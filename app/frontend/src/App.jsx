@@ -21,15 +21,17 @@ const App = () => {
     fetchTasks();
   }, []);
 
-  const handleTaskAddition = () => {
-    const newTask = [...tasks,{
-        id: '2',
-        descricao: 'hard code',
-        status: 'pendente',
-        createdAt: 'data'
-      },
-    ];
-    setTasks(newTask);
+  const handleTaskAddition = async (descricao) => {
+    const newTask = {
+      descricao,
+      status: 'pendente',
+    };
+    
+    await axios.post('http://localhost:3001/todo', newTask);
+    
+    const { data } = await axios.get('http://localhost:3001/todo');
+
+    setTasks(data);
   }
   
   return (
