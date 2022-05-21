@@ -2,31 +2,43 @@
   background-color: #444;
   display: flex;
   border-radius: 5px;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
-.task-id {
+.task-numLinha, .task-numLinha10 {
   background-color: rgb(0, 218, 199);
-  padding: 15px 20px;
+  padding: 15px 17px;
   border-radius: 5px 0 0 5px;
   color: rgb(3, 53, 87);
 }
 
-.task-descricao {
+.task-numLinha10 {
+  padding: 15px 12.5px;
+}
+
+.task-descricao, .task-createdAt {
   padding: 15px 20px;
   align-items: center;
   color: white;
 }
 
-.task-status {
+.task-status-pen, .task-status-con, .task-status-and {
   padding: 15px 20px;
   align-items: center;
+}
+
+.task-status-pen {
   color: rgb(250, 109, 109);
 }
 
+.task-status-con {
+  color: rgb(109, 250, 168);
+}
+
+.task-status-and {
+  color: rgb(248, 250, 109);
+}
+
 .task-createdAt {
-  padding: 15px 20px;
   border-radius: 0 5px 5px 0;
-  align-items: center;
-  color: white;
 }
